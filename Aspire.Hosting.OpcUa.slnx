@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/OpcUaPlayground.AppHost/OpcUaPlayground.AppHost.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Aspire.Hosting.OpcUa/Aspire.Hosting.OpcUa.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Aspire.Hosting.OpcUa.Tests/Aspire.Hosting.OpcUa.Tests.csproj" />
+  </Folder>
+</Solution>
