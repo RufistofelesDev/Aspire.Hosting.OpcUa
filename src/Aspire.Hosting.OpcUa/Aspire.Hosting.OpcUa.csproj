@@ -14,9 +14,9 @@
     <Description>An Aspire hosting integration for OPC UA. Adds a fully simulated industrial PLC to your app model with one line — no hardware required.</Description>
     <PackageTags>aspire;opcua;opc-ua;iiot;industrial;plc;scada;automation;dotnet</PackageTags>
     <Authors>Rafael Perez</Authors>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/Rufistofeles/Aspire.Hosting.OpcUa</RepositoryUrl>
+    <RepositoryUrl>https://github.com/RufistofelesDev/Aspire.Hosting.OpcUa</RepositoryUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
