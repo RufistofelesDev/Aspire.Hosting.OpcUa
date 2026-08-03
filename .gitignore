@@ -22,3 +22,6 @@
 *.coverage
 coverage*.json
 coverage*.xml
+
+# Local pack output
+artifacts/
