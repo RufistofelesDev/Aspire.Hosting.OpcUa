@@ -25,9 +25,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Install exactly what global.json pins. The repo is on a 10.0.4xx
+      # preview, and hosted runners currently top out at 10.0.302 — roll-forward
+      # only ever goes up, so '10.0.x' resolves to nothing. Reading global.json
+      # keeps the repo the source of truth instead of drifting to match CI.
       - uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '10.0.x'
+          global-json-file: global.json
 
       - name: Restore
         run: dotnet restore
