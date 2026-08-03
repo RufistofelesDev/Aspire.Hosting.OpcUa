@@ -70,6 +70,13 @@ This package deliberately owns very little. Microsoft maintains the simulator an
 
 The defaults (`--autoaccept`, `--unsecuretransport`) exist so that `AddOpcUaPlc("plc")` just works in a dev inner loop, without a certificate exchange. They are **development defaults**. The upstream simulator is explicitly not recommended for production deployment, and neither is this.
 
-## License
+## Licence
 
-MIT
+**AGPL-3.0-or-later**, with a commercial licence available — see
+[LICENSING.md](https://github.com/RufistofelesDev/Aspire.Hosting.OpcUa/blob/main/LICENSING.md).
+
+Read that before you take the free option. This is a **library**, not a server, so
+the copyleft reaches further than it would for something you merely deploy: you add
+it with `<PackageReference>` and call it from your own AppHost, which makes your
+AppHost a combined work. If you cannot publish your source, take the commercial
+licence.
