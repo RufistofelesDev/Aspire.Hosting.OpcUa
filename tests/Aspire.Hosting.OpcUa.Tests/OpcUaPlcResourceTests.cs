@@ -91,6 +91,21 @@ public class OpcUaPlcResourceTests
     }
 
     [Fact]
+    public async Task AddOpcUaPlc_StartsTheWebServerItAdvertises()
+    {
+        // --wp only picks the port. Without --sp the simulator never opens a web
+        // listener, so the HTTP endpoint below would be declared and dead.
+        var builder = DistributedApplication.CreateBuilder();
+
+        var plc = builder.AddOpcUaPlc("plc");
+
+        var args = await ResolveArgsAsync(plc.Resource);
+
+        Assert.Contains("--sp", args);
+        Assert.Contains(plc.Resource.Annotations.OfType<EndpointAnnotation>(), e => e.Name == "http");
+    }
+
+    [Fact]
     public async Task WithFastNodes_EmitsCountAndRate()
     {
         var builder = DistributedApplication.CreateBuilder();

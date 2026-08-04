@@ -43,6 +43,10 @@ public static class OpcUaPlcBuilderExtensions
                       .WithHttpEndpoint(targetPort: HttpTargetPort, port: httpPort, name: OpcUaPlcResource.HttpEndpointName)
                       .WithArgs($"--pn={OpcUaTargetPort}")
                       .WithArgs($"--wp={HttpTargetPort}")
+                      // --wp only chooses the port; the web server does not exist without
+                      // --sp. Without this the HTTP endpoint above is declared, appears in
+                      // the dashboard, and never answers.
+                      .WithArgs("--sp")
                       .WithArgs("--autoaccept")
                       .WithArgs("--unsecuretransport");
     }
