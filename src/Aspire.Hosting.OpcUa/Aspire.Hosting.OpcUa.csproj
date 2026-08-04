@@ -11,9 +11,9 @@
 
   <PropertyGroup>
     <PackageId>Rufistofeles.Aspire.Hosting.OpcUa</PackageId>
-    <Version>1.0.0-preview.1</Version>
+    <Version>1.0.0</Version>
     <Description>An Aspire hosting integration for OPC UA. Adds a fully simulated industrial PLC to your app model with one line — no hardware required.</Description>
-    <PackageReleaseNotes>Preview. The resource model, container image reference (mcr.microsoft.com/iotedge/opc-plc:2.14.22) and every simulator argument are unit-tested and verified against the simulator's documented options, but the container has not yet been started end-to-end under an Aspire AppHost. 1.0.0 ships once it has.</PackageReleaseNotes>
+    <PackageReleaseNotes>First stable release. Verified end to end against a running container, not only against the resource model: the pinned image pulls, Aspire starts it, every argument the package emits is accepted and acted on by the simulator, the OPC UA endpoint completes a protocol handshake, and the HTTP endpoint serves the OPC Publisher configuration. Fixes a defect found by that first real run — the HTTP endpoint was advertised but never listening, because --wp selects the port while only --sp starts the web server.</PackageReleaseNotes>
     <PackageTags>aspire;opcua;opc-ua;iiot;industrial;plc;scada;automation;dotnet</PackageTags>
     <Authors>Rafael Pérez</Authors>
     <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
