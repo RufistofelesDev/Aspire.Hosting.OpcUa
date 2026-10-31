@@ -9,6 +9,9 @@
     <PackageVersion Include="Aspire.Hosting" Version="13.4.6" />
     <PackageVersion Include="Aspire.Hosting.AppHost" Version="13.4.6" />
     <PackageVersion Include="Aspire.Hosting.Testing" Version="13.4.6" />
+    <!-- Transitive via Aspire.Hosting → StreamJsonRpc 2.25.29. 2.5.302 has GHSA-qhrr-8q5h-9q3h
+         (moderate, 2026-10-15), fixed in 2.5.303. Drop once Aspire's own floor is patched. -->
+    <PackageVersion Include="MessagePack" Version="2.5.303" />
   </ItemGroup>
 
   <ItemGroup Label="Testing">
